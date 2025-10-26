@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:CS464GroupProject}",
+            "name": "Debug CS464GroupProject",
+            "program": "${workspaceFolder:CS464GroupProject}/.build/debug/CS464GroupProject",
+            "preLaunchTask": "swift: Build Debug CS464GroupProject"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:CS464GroupProject}",
+            "name": "Release CS464GroupProject",
+            "program": "${workspaceFolder:CS464GroupProject}/.build/release/CS464GroupProject",
+            "preLaunchTask": "swift: Build Release CS464GroupProject"
+        }
+    ]
+}
