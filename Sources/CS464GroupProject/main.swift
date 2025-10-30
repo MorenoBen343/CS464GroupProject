@@ -2,6 +2,9 @@
 // https://docs.swift.org/swift-book
 import Foundation   //allows for API calls
 import UserNotifications //for sending notifications with NotificationManager class
+//import Firebase library for sending notifications with AppleDev integration
+//import FirebaseMessaging library extension
+//import UIKitz 
 
 //Data models
 
@@ -67,3 +70,35 @@ func testDataModels(){
 }
 
 testDataModels()
+
+// Code for Notification System using FireBase and AppleDev Resources, Youtube link for reference: https://www.youtube.com/watch?v=UJree24HWx0
+// Still needs to be integrated with FireBase, gotta figure out how to install FireBase library on CSmachines
+// class appDelegate: UIRepsponder, UIApplicationDelegate, MessagingDelegate, UNUserNotificationCenterDelegate {
+//         func application(_application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//             FirebaseApp.configure()
+
+//             Messaging.messaging()delegate = self
+//             UNUserNotificationCenter.current().delegate = self
+
+//             UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { success, _ in
+//                 guard success else {
+//                     return
+//                 }
+
+//                 print("Success in APNS registry")
+//             }
+
+//             application.registerForRemoteNotifications()
+
+//             return true
+//         }
+
+//         func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+//             messaging.token { token, _ in
+//             guard let token = token else {
+//                 return 
+//             }
+//             print("Token: \(token)")
+//             }
+//         }
+// }
